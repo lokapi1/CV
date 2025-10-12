@@ -21,7 +21,7 @@ header {
     justify-content: flex-end;
     img {
       width: 30px;
-      object-fit: contain; /*pour ne pas déformer l'image */
+      object-fit: contain; /*pour ne pas déformer l'image*/
     }
   }
 
@@ -85,6 +85,7 @@ h4 {
 summary:hover {
   color: #a4161a;
   font-weight: 900;
+  cursor:pointer;
 }
 
 i {
@@ -93,12 +94,13 @@ i {
 
 /* Conteneur de la barre de progression */
 .progress {
-  width: 200px;
+  width: 150px;
   height: 12px;
   background-color: #d4d4d4;
   box-shadow: 10px 1px 10px black;
   border-radius: 12px;
   overflow: hidden;
+  gap: 50px;
 }
 
 .progress-bar {
@@ -160,6 +162,17 @@ i {
   justify-content: center;
   align-items: flex-start;
   overflow: hidden;
+}
+
+.col {
+  width: 450px;
+  .progress#langues {
+    width: 300px;
+    align-self: center;
+  }
+  .progress-title#langues {
+    align-self: center;
+  }
 }
 
 .progress-container {
