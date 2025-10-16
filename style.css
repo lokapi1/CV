@@ -17,7 +17,7 @@ header {
   }
 
   .img-container {
-    display:flex;
+    display: flex;
     justify-content: flex-end;
     img {
       width: 30px;
@@ -54,12 +54,36 @@ h1 {
   text-align: center;
 }
 
-h2 {
+h2, .bloc {
+  color: #eae0d5;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  
+}
+
+.bloc {
   border: solid #eae0d5;
   background-color: #161a1d;
-  color: #eae0d5;
-  padding-top: 20px;
-  padding-bottom: 20px;
+}
+
+#parcours_aca {
+  border: solid #eae0d5;
+  background-color: #161a1d;
+}
+
+.subtitle {
+    font-size: small;
+    display: flex;
+    gap: 70px;
+    justify-content: space-around;
+    margin: 0;
+    color: white;
+  }
+
+#parcours_pro {
+  border-bottom: none;
+  border: solid #eae0d5;
+  background-color: #161a1d;
 }
 
 .col {
@@ -85,7 +109,7 @@ h4 {
 summary:hover {
   color: #a4161a;
   font-weight: 900;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 i {
@@ -189,20 +213,16 @@ i {
   padding-top: 20px;
 }
 
-.subtitle {
-  font-size: small;
-  display: flex;
-  gap: 200px;
-  justify-content: space-around;
-  margin: 0;
-}
-
 #formation {
   border-top: solid 2px black;
   padding-top: 10px;
   li {
     margin: 1em;
   }
+}
+
+#experiences {
+  padding-right: 18px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -215,12 +235,12 @@ i {
       font-size: 15px;
     }
   }
+
   .container {
     display: flex;
     flex-direction: column;
-    align-items: left;
-    padding-left: 18px;
-    width: 180vw;
+    align-items: center;
+    padding: 18px;
     #langues {
       float: center;
       width: 50%;
@@ -236,7 +256,7 @@ i {
     box-shadow: 10px 1px 10px black;
     border-radius: 12px;
     gap: 30px;
-    width: 150%;
+    width: 100%;
   }
 
   .progress-columns {
@@ -258,4 +278,5 @@ i {
     margin: 0;
     padding-top: 20px;
   }
+
 }
