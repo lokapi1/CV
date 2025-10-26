@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!--to set a initial screen visualization by default-->
   <title>CV</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -34,7 +34,7 @@
     </nav>
   </header>
 
-  <main class="container">
+  <div class="container">
     <section class="col">
       <h2 id="parcours_aca">Parcours Professionnel</h2>
 
@@ -181,7 +181,7 @@
       </div>
 
       <div class="progress-columns">
-        <div class="progress-container">
+        <div class="progress-container-prog">
           <p class="progress-title">Python</p>
           <div class="progress">
             <div class="progress-bar" id="progress-python"></div>
@@ -195,7 +195,7 @@
             <div class="progress-bar" id="progress-html"></div>
           </div>
         </div>
-        <div class="progress-container">
+        <div class="progress-container-prog">
           <p class="progress-title">Wordpress</p>
           <div class="progress">
             <div class="progress-bar" id="progress-wordpress"></div>
@@ -215,39 +215,46 @@
         </div>
       </div>
       <nav>
-        <ul id="formation">
+        <ul class="formation">
           <li>Threat analysis (<strong>CISCO & Coursea</strong>)</li>
           <li>Practical Ethical hacking (<strong>TCM security</strong>)</li>
           <li>Formation bases python (<strong>OP</strong>)</li>
         </ul>
       </nav>
     </div>
-  </main>
+  </div>
+
+
+
+
+
+
+  <!--continue here-->
   <div class="container">
-    <div class="col" id="col-langues">
+    <div class="col">
       <h2 class="bloc">Langues</h2>
-      <div class="progress-container" id="langues">
-        <p class="progress-title" id="langues">Français</p>
-        <div class="progress" id="langues">
+      <div class="progress-container">
+        <p class="progress-title">Français</p>
+        <div class="progress">
           <div class="progress-bar" id="progress-français"></div>
         </div>
-        <p class="progress-title" id="langues">Anglais</p>
-        <div class="progress" id="langues">
+        <p class="progress-title">Anglais</p>
+        <div class="progress">
           <div class="progress-bar" id="progress-anglais"></div>
         </div>
-        <p class="progress-title" id="langues">Espagnol</p>
-        <div class="progress" id="langues">
+        <p class="progress-title">Espagnol</p>
+        <div class="progress">
           <div class="progress-bar" id="progress-esp"></div>
         </div>
-        <p class="progress-title" id="langues">Japonais</p>
-        <div class="progress" id="langues">
+        <p class="progress-title">Japonais</p>
+        <div class="progress">
           <div class="progress-bar" id="progress-japonais"></div>
         </div>
       </div>
     </div>
     <div class="col">
       <h2 class="bloc">Engagements</h2>
-      <ul id="formation">
+      <ul id="engagements">
         <li>Ambassadrice de <strong>l'UNICEF</strong></li>
         <li>
           Membre de <strong>Chat va bien</strong> et
