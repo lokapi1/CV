@@ -1,7 +1,9 @@
+/*Global*/
 html {
   font-family: "Courier New", Courier, monospace;
 }
 
+/*Header*/
 header {
   background-color: #161a1d;
   color: #eae0d5;
@@ -9,7 +11,7 @@ header {
   padding-bottom: 30px;
   padding-top: 30px;
   font-size: 30px;
-
+  
   p {
     font-size: 20px;
     text-align: right;
@@ -41,24 +43,16 @@ header {
   }
 }
 
+/*Titles*/
+
 h1 {
   margin-left: 20px;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* aligne en haut */
-  gap: 80px;
-  padding-top: 10px;
-  text-align: center;
-}
-
 h2, .bloc {
   color: #eae0d5;
-  padding-top: 8px;
+  padding-top: 8px; 
   padding-bottom: 8px;
-  
 }
 
 .bloc {
@@ -66,44 +60,37 @@ h2, .bloc {
   background-color: #161a1d;
 }
 
+h4 {
+  font-size: 20px;
+}
+
+/*Columns*/
+
+.col {
+  width: 450px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding-top: 10px;
+  text-align: center;
+}
+
 #parcours_aca {
   border: solid #eae0d5;
   background-color: #161a1d;
-}
-
-.subtitle {
-    font-size: small;
-    display: flex;
-    gap: 70px;
-    justify-content: space-around;
-    margin: 0;
-    color: white;
-  }
-
-#parcours_pro {
-  border-bottom: none;
-  border: solid #eae0d5;
-  background-color: #161a1d;
-}
-
-.col {
-  width: 50%;
 }
 
 #experiences {
   border: solid 2px black;
 }
 
-li {
-  text-align: left;
-}
-
-h4 {
-  font-size: 20px;
-}
-
-.second_nav {
-  padding-top: 20px;
+#parcours_pro {
+  border-bottom: none;
+  border: solid #eae0d5;
+  background-color: #161a1d;
 }
 
 summary:hover {
@@ -112,28 +99,83 @@ summary:hover {
   cursor: pointer;
 }
 
+/*Lists*/
+.second_nav {
+  padding-top: 20px;
+}
+
 i {
   font-size: 12px;
 }
 
-/* Conteneur de la barre de progression */
+.subtitle {
+  font-size: small;
+  display: flex;
+  gap: 70px;
+  justify-content: space-around;
+  margin: 0;
+  color: white;
+}
+
+.formation {
+  text-align: left;
+}
+
+/*Progress bars*/
+
+.progress-columns {
+  display: flex;
+  gap: 60px; /* espace entre les colonnes */
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.progress-container-prog {
+  display: flex;
+  flex-direction: column; /* empile titre + barre verticalement */
+  gap: 5px; /* petit espace entre les deux */
+  margin-bottom: 20px; /* espace entre chaque bloc */
+  .progress {
+    width : 150px;
+  }
+}
+
+.progress-title {
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding-top: 20px;
+}
+
+/*Conteneur de la barre de chargement*/
 .progress {
-  width: 150px;
   height: 12px;
   background-color: #d4d4d4;
   box-shadow: 10px 1px 10px black;
   border-radius: 12px;
   overflow: hidden;
-  gap: 50px;
+  gap: 30px;
+  width: 100px;
+  align-self: center;
 }
 
 .progress-bar {
   height: 100%;
-  width: 0;
   background: linear-gradient(90deg, #a4161a 0%, #ba181b 50%, #a4161a 100%);
   background-size: 200% 100%;
   animation: fillBar 3s ease-out forwards, fading 2s linear infinite;
   border-radius: 12px;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column; /* empile titre + barre verticalement */
+  gap: 5px; /* petit espace entre les deux */
+  margin-bottom: 20px; /* espace entre chaque bloc */
+  .progress {
+    width:250px;
+  }
 }
 
 @keyframes fillBar {
@@ -180,49 +222,19 @@ i {
   --target-width: 40%;
 }
 
-.progress-columns {
-  display: flex;
-  gap: 60px; /* espace entre les colonnes */
-  justify-content: center;
-  align-items: flex-start;
-  overflow: hidden;
-}
-
-.col {
-  width: 450px;
-  .progress#langues {
-    width: 300px;
-    align-self: center;
-  }
-  .progress-title#langues {
-    align-self: center;
-  }
-}
-
-.progress-container {
-  display: flex;
-  flex-direction: column; /* empile titre + barre verticalement */
-  gap: 5px; /* petit espace entre les deux */
-  margin-bottom: 20px; /* espace entre chaque bloc */
-}
-
-.progress-title {
-  font-weight: bold;
+#experiences {
+  padding-right: 18px;
   text-align: left;
-  margin: 0;
-  padding-top: 20px;
+  text-decoration: none;
 }
 
-#formation {
+#engagements {
   border-top: solid 2px black;
   padding-top: 10px;
+  text-align: left;
   li {
     margin: 1em;
   }
-}
-
-#experiences {
-  padding-right: 18px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -240,43 +252,31 @@ i {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 18px;
-    #langues {
-      float: center;
-      width: 50%;
-      margin-left: 60px;
+  }
+  
+  .progress-columns {
+    display: flex;
+    gap: 150px; 
+    align-items: flex-start;
+    .progress {
+      width: 100px;
     }
   }
+
   .second_nav {
     padding-top: 0px;
   }
-  .progress {
-    height: 30px;
-    background-color: #d4d4d4;
-    box-shadow: 10px 1px 10px black;
-    border-radius: 12px;
-    gap: 30px;
-    width: 100%;
-  }
-
-  .progress-columns {
-    display: flex;
-    gap: 150px; /* espace entre les colonnes */
-    align-items: flex-start;
-  }
-
+  
   .progress-container {
     display: flex;
     flex-direction: column; /* empile titre + barre verticalement */
     gap: 5px; /* petit espace entre les deux */
-    margin-bottom: 10px; /* espace entre chaque bloc */
   }
 
   .progress-title {
     font-weight: bold;
-    text-align: left;
+    text-align: center;
     margin: 0;
     padding-top: 20px;
   }
-
 }
